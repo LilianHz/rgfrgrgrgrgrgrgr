@@ -1460,6 +1460,32 @@
                 margin-bottom: 5px;
             }
         }
+
+        /* Ajout des styles pour les témoignages supplémentaires et le bouton */
+        .testimonial-card.hidden-testimonial {
+            display: none;
+        }
+
+        .show-more-button {
+            background: white;
+            border: 2px solid var(--trust-blue);
+            color: var(--trust-blue);
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 30px auto;
+            display: block;
+        }
+
+        .show-more-button:hover {
+            background: var(--trust-blue);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(21, 101, 192, 0.2);
+        }
     </style>
 </head>
 <body>
@@ -1671,9 +1697,191 @@
                 </div>
             </div>
             
-            <div style="margin-top: 40px;">
-                <a href="https://buy.stripe.com/fZeeVN5Tz4RYgKI9AG" class="cta-button pulse">JE RÉCUPÈRE MES CLIENTS</a>
+            <div class="testimonial-card hidden-testimonial">
+                <div class="testimonial-header">
+                    <div>
+                        <h3 class="testimonial-name">Laurent D.</h3>
+                        <p class="testimonial-business">Garage automobile à Nantes</p>
+                    </div>
+                    <span class="testimonial-badge">7 SEMAINES AVEC VITRIZ</span>
+                </div>
+                
+                <div class="comparison-container">
+                    <div class="comparison-side before-side">
+                        <span class="comparison-label before-label">AVANT</span>
+                        <ul class="comparison-list">
+                            <li class="comparison-item before-item">Seulement <span class="key-result">4 avis</span> sur Google</li>
+                            <li class="comparison-item before-item">Position <span class="key-result">#8</span> dans les recherches locales</li>
+                            <li class="comparison-item before-item">15-20 véhicules par semaine</li>
+                            <li class="comparison-item before-item">Forte concurrence des grandes chaînes</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="comparison-side after-side">
+                        <span class="comparison-label after-label">APRÈS</span>
+                        <ul class="comparison-list">
+                            <li class="comparison-item after-item"><span class="key-result">59 avis 5 étoiles</span> sur Google</li>
+                            <li class="comparison-item after-item">Position <span class="key-result">#1</span> dans les recherches locales</li>
+                            <li class="comparison-item after-item">35-40 véhicules hebdomadaires</li>
+                            <li class="comparison-item after-item">Rendez-vous réservés 2 semaines à l'avance</li>
+                            <li class="comparison-item after-item">Augmentation du panier moyen de <span class="key-result">32%</span></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="testimonial-quote">
+                    <p class="quote-content">"J'étais sceptique au début, mais Vitriz m'a fait passer de <span class="highlight">4</span> à <span class="highlight">59 avis 5 étoiles</span>. Pour chaque euro investi, j'ai récupéré 20€ de chiffre d'affaires supplémentaire."</p>
+                </div>
             </div>
+            
+            <div class="testimonial-card hidden-testimonial">
+                <div class="testimonial-header">
+                    <div>
+                        <h3 class="testimonial-name">Marie T.</h3>
+                        <p class="testimonial-business">Salon d'esthétique à Lille</p>
+                    </div>
+                    <span class="testimonial-badge">4 SEMAINES AVEC VITRIZ</span>
+                </div>
+                
+                <div class="comparison-container">
+                    <div class="comparison-side before-side">
+                        <span class="comparison-label before-label">AVANT</span>
+                        <ul class="comparison-list">
+                            <li class="comparison-item before-item"><span class="key-result">3 avis</span> dispersés sur différentes plateformes</li>
+                            <li class="comparison-item before-item">Invisible sur Google malgré 5 ans d'expérience</li>
+                            <li class="comparison-item before-item">10-15 clientes par semaine</li>
+                            <li class="comparison-item before-item">Dépendance aux promotions pour attirer des clientes</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="comparison-side after-side">
+                        <span class="comparison-label after-label">APRÈS</span>
+                        <ul class="comparison-list">
+                            <li class="comparison-item after-item"><span class="key-result">42 avis excellents</span> concentrés sur Google</li>
+                            <li class="comparison-item after-item">Position <span class="key-result">#2</span> pour "institut beauté" dans sa ville</li>
+                            <li class="comparison-item after-item">30-35 clientes hebdomadaires</li>
+                            <li class="comparison-item after-item">Augmentation des tarifs de <span class="key-result">15%</span> sans perte de clientèle</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="testimonial-quote">
+                    <p class="quote-content">"Zéro compétence technique, mais <span class="highlight">42 avis 5 étoiles</span> en un mois. Je gère tout ça en 5 minutes par jour sur mon téléphone entre deux clientes."</p>
+                </div>
+            </div>
+
+            <div class="testimonial-card hidden-testimonial">
+                <div class="testimonial-header">
+                    <div>
+                        <h3 class="testimonial-name">Pierre M.</h3>
+                        <p class="testimonial-business">Restaurant italien à Lyon</p>
+                    </div>
+                    <span class="testimonial-badge">6 SEMAINES AVEC VITRIZ</span>
+                </div>
+                
+                <div class="comparison-container">
+                    <div class="comparison-side before-side">
+                        <span class="comparison-label before-label">AVANT</span>
+                        <ul class="comparison-list">
+                            <li class="comparison-item before-item"><span class="key-result">8 avis</span> sur TripAdvisor, <span class="key-result">5 sur Google</span></li>
+                            <li class="comparison-item before-item">Position page 2 sur Google Maps</li>
+                            <li class="comparison-item before-item">50% de remplissage en semaine</li>
+                            <li class="comparison-item before-item">Peu de visibilité face aux grandes chaînes</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="comparison-side after-side">
+                        <span class="comparison-label after-label">APRÈS</span>
+                        <ul class="comparison-list">
+                            <li class="comparison-item after-item"><span class="key-result">67 avis 5 étoiles</span> sur Google, <span class="key-result">38</span> sur TripAdvisor</li>
+                            <li class="comparison-item after-item">Position <span class="key-result">#1</span> pour "restaurant italien" dans son quartier</li>
+                            <li class="comparison-item after-item">Restaurant plein à 90% même en semaine</li>
+                            <li class="comparison-item after-item">Réservations augmentées de <span class="key-result">75%</span> le weekend</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="testimonial-quote">
+                    <p class="quote-content">"Je pensais que Vitriz était trop cher, mais chaque euro dépensé nous en rapporte 18. En 6 semaines, <span class="highlight">67 avis 5 étoiles</span> et un CA en hausse de 63%."</p>
+                </div>
+            </div>
+
+            <div class="testimonial-card hidden-testimonial">
+                <div class="testimonial-header">
+                    <div>
+                        <h3 class="testimonial-name">Sophie B.</h3>
+                        <p class="testimonial-business">Thérapeute indépendante à Strasbourg</p>
+                    </div>
+                    <span class="testimonial-badge">5 SEMAINES AVEC VITRIZ</span>
+                </div>
+                
+                <div class="comparison-container">
+                    <div class="comparison-side before-side">
+                        <span class="comparison-label before-label">AVANT</span>
+                        <ul class="comparison-list">
+                            <li class="comparison-item before-item"><span class="key-result">0 avis</span> Google, invisibilité totale</li>
+                            <li class="comparison-item before-item">6-8 nouveaux clients par mois</li>
+                            <li class="comparison-item before-item">Difficulté à se démarquer parmi 30+ thérapeutes locaux</li>
+                            <li class="comparison-item before-item">Dépendance totale au bouche-à-oreille</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="comparison-side after-side">
+                        <span class="comparison-label after-label">APRÈS</span>
+                        <ul class="comparison-list">
+                            <li class="comparison-item after-item"><span class="key-result">28 avis 5 étoiles</span> sur Google</li>
+                            <li class="comparison-item after-item">22-25 nouveaux clients mensuels</li>
+                            <li class="comparison-item after-item">Position <span class="key-result">#3</span> pour "thérapie" dans sa ville</li>
+                            <li class="comparison-item after-item">Liste d'attente de 2 semaines</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="testimonial-quote">
+                    <p class="quote-content">"Petite indépendante, je pensais que ça ne marcherait pas pour moi. <span class="highlight">28 avis</span> en 5 semaines et seulement 10 minutes par semaine pour tout gérer !"</p>
+                </div>
+            </div>
+
+            <div class="testimonial-card hidden-testimonial">
+                <div class="testimonial-header">
+                    <div>
+                        <h3 class="testimonial-name">Pauline L.</h3>
+                        <p class="testimonial-business">Auto-école à Montpellier</p>
+                    </div>
+                    <span class="testimonial-badge">6 SEMAINES AVEC VITRIZ</span>
+                </div>
+                
+                <div class="comparison-container">
+                    <div class="comparison-side before-side">
+                        <span class="comparison-label before-label">AVANT</span>
+                        <ul class="comparison-list">
+                            <li class="comparison-item before-item"><span class="key-result">3 avis</span> clients sur Google</li>
+                            <li class="comparison-item before-item">Invisible face aux grandes chaînes d'auto-écoles</li>
+                            <li class="comparison-item before-item">6-8 nouvelles inscriptions par mois</li>
+                            <li class="comparison-item before-item">Difficulté à attirer les jeunes conducteurs</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="comparison-side after-side">
+                        <span class="comparison-label after-label">APRÈS</span>
+                        <ul class="comparison-list">
+                            <li class="comparison-item after-item"><span class="key-result">35 avis 5 étoiles</span> sur Google</li>
+                            <li class="comparison-item after-item">Position <span class="key-result">#2</span> pour "auto-école" dans sa ville</li>
+                            <li class="comparison-item after-item">22-25 nouvelles inscriptions mensuelles</li>
+                            <li class="comparison-item after-item">Liste d'attente pour certains créneaux populaires</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="testimonial-quote">
+                    <p class="quote-content">"À 50 ans, pas du tout douée en informatique. L'équipe a tout configuré pour moi. <span class="highlight">35 avis</span> en 6 semaines et mon carnet d'élèves est maintenant plein !"</p>
+                </div>
+            </div>
+            
+            <button class="show-more-button" onclick="showMoreTestimonials()">
+                VOIR PLUS D'AVIS
+                <i class="fas fa-chevron-down" style="margin-left: 8px;"></i>
+            </button>
         </div>
     </section>
 
@@ -1925,6 +2133,17 @@
                 .catch(err => {
                     console.error('Erreur lors de la copie :', err);
                 });
+        }
+
+        function showMoreTestimonials() {
+            const hiddenTestimonials = document.querySelectorAll('.hidden-testimonial');
+            const showMoreButton = document.querySelector('.show-more-button');
+            
+            hiddenTestimonials.forEach(testimonial => {
+                testimonial.classList.remove('hidden-testimonial');
+            });
+            
+            showMoreButton.style.display = 'none';
         }
     </script>
 
