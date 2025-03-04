@@ -12,6 +12,25 @@
     <link rel="preload" as="image" href="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg">
     <link rel="preload" as="image" href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/2048px-2021_Facebook_icon.svg.png">
     <link rel="preload" as="image" href="https://cdn.trustpilot.net/brand-assets/1.1.0/logo-black.svg">
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1263339861432805');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1263339861432805&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
     <style>
         /* Reset et base */
         * {
@@ -2145,6 +2164,26 @@
             
             showMoreButton.style.display = 'none';
         }
+
+        // Fonction pour tracker l'événement "Add to Cart" sur tous les liens Stripe
+        function trackAddToCart() {
+            // Sélectionner tous les liens qui pointent vers Stripe
+            const stripeLinks = document.querySelectorAll('a[href*="stripe.com"]');
+            
+            // Ajouter l'événement click à chaque lien
+            stripeLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    // Déclencher l'événement Add to Cart
+                    fbq('track', 'AddToCart', {
+                        value: 89.00,
+                        currency: 'EUR',
+                    });
+                });
+            });
+        }
+
+        // Exécuter la fonction au chargement de la page
+        window.addEventListener('load', trackAddToCart);
     </script>
 
     <!-- Modal avec bouton de copie -->
