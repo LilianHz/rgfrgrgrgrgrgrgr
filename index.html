@@ -23,11 +23,11 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1263339861432805');
+    fbq('init', '502187296212792');
     fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1263339861432805&ev=PageView&noscript=1"
+    src="https://www.facebook.com/tr?id=502187296212792&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Meta Pixel Code -->
 
@@ -2204,5 +2204,26 @@
             <a href="https://buy.stripe.com/fZeeVN5Tz4RYgKI9AG" class="cta-button pulse">ACTIVER MON COMPTE</a>
         </div>
     </div>
+
+    <script>
+    function trackStripeClick() {
+        // Sélectionner tous les liens qui pointent vers Stripe
+        const stripeLinks = document.querySelectorAll('a[href*="stripe.com"]');
+        
+        // Ajouter l'événement click à chaque lien
+        stripeLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                // Déclencher l'événement StartTrial
+                fbq('track', 'StartTrial', {
+                    value: 89.00,
+                    currency: 'EUR',
+                });
+            });
+        });
+    }
+
+    // Exécuter la fonction au chargement de la page
+    window.addEventListener('load', trackStripeClick);
+    </script>
 </body>
 </html>
